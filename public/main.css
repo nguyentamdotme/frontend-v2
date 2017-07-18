@@ -1,0 +1,1290 @@
+/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h3 {
+  font-weight: 500;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+
+figcaption,
+figure,
+main { /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details, /* 1 */
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10-.
+ */
+p {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+[hidden] {
+  display: none;
+}
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+  font-size: 1em;
+  line-height: 20px;
+  background: #F3F5F7;
+}
+
+.textCenter {
+  text-align: center;
+  margin: 0px auto;
+}
+
+.textRed {
+  color: #FF0000;
+}
+
+.textBlue {
+  color: rgb(0, 188, 212);
+}
+
+.btn-lg {
+  padding: 10px;
+}
+
+.btn {
+  padding: 6px;
+  width: 100%;
+  border: 0.1px solid #ffffff;
+  background-color: rgb(0, 188, 212) !important;
+}
+
+.waitConfirm {
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.textRed {
+  color: red;
+}
+
+.bgWhite {
+  background-color: #ffffff;
+}
+
+.container{
+  margin: 0px;
+  padding: 0px;
+}
+
+.price {
+  background: #4DD0E1;
+  padding: 5px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: #ffffff;
+  z-index: 1;
+}
+.imageProduct {
+  width: 80%;
+  margin: 10px auto;
+  display: block;
+  z-index: 1;
+}
+
+.productDetail {
+  z-index: 1;
+}
+.productDetail h3 {
+  margin: 0px !important;
+}
+.productDetail p {
+  margin-top: 10px !important;
+  margin-bottom: 5px !important;
+}
+
+.productDetail h3 a{
+  text-decoration: none;
+  color: #212121;
+  font-weight: 100;
+}
+
+.productDetail h3:hover a{
+  color: #616161;
+}
+
+.defaultButton {
+  background: #fffff;
+}
+
+.iconGrey {
+  width: 100%;
+  display: block !important;
+  margin: 0px auto !important;
+}
+
+.iconWhite {
+  color: #ffffff !important;
+}
+
+.iconColorGrey {
+  color: #C0CBD0;
+}
+.defaultButtonLeft {
+  border-width: 0px 0.1px 0px 0px;
+  border-style: solid;
+  border-color: #C0CBD0;
+  padding-bottom: 0.1px;
+}
+
+.defaultButtonRight {
+  border-width: 0px 0px 0px 0px;
+  border-style: solid;
+  border-color: #C0CBD0;
+  padding-bottom: 0.1px;
+}
+
+.categoryWrapper h3{
+  text-align: center;
+  background: #EEEEEE;
+  color:     #212121;
+  padding: 10px;
+  margin: 0px;
+  font-size: 1.2em;
+  font-weight: 200;
+}
+
+.categoryChild {
+  float: left;
+  max-width: 24%;
+  width: 23.6%;
+  padding: 5px;
+  height: 170px;
+}
+
+img.imageCategory {
+    height: 90px;
+    padding: 10px;
+}
+
+.bgRed400 {
+  background: #F44336;
+  color: #ffffff;
+}
+
+.bgRed400:hover {
+  background: #EF5350;
+  color: #ffffff;
+}
+
+.bgBlue400 {
+  background: #2196F3;
+  color: #ffffff;
+}
+
+.bgBlue400:hover {
+  background: #42A5F5;
+  color: #ffffff;
+}
+
+.bgDeepOrange400 {
+  background: #FF5722;
+  color: #ffffff;
+}
+
+.bgDeepOrange400:hover {
+  background: #FF7043;
+  color: #ffffff;
+}
+
+.removeMargin {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.icon {
+  margin: auto auto;
+}
+
+.btnHover:hover {
+  cursor: pointer;
+}
+
+.icon2x {
+  width: 100px !important;
+  height: 100px !important;
+  padding: 10px;
+}
+
+.prouctInfo-request p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.prouctInfo-request h3{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sliderSellerConfirm {
+  background: #ffffff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.buttonWrapper {
+  background: #ffffff;
+  padding: 5px 0px;
+  position: absolute;
+  width: 98%;
+  bottom: 0px;
+}
+
+.buttonPrimary{
+  background: rgb(0, 188, 212);
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  outline : 1px;
+  outline-color : #000000;
+  border : 1px solid #ffffff;
+}
+
+.productWrapper{
+  height: 330px;
+  max-width : 100%;
+  width       : 100%;
+  background  : #ffffff;
+  margin: 20px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 5px, rgba(0, 0, 0, 0.227451) 0px 3px 5px;
+}
+.productWrapper a img.imageProduct {
+  height: 50%;
+}
+.productButton {
+  padding: 0;
+  margin: 0;
+}
+.textWhite{
+  color: #ffffff;
+}
+
+.leftMenuWrapper{
+  background: #ffffff;
+  padding: 0px 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.leftMenu {
+  position: fixed;
+  top: 60px;
+  background: #ffffff;
+  height: 100%;
+}
+
+.noPadding{
+  padding: 0px 0px !important;
+}
+
+.listItem{
+  padding: 0px;
+  margin: 10px auto;
+  width: 50px;
+  border: 0 0 0 1px;
+}
+
+.paper{
+  height: 100;
+  width: 100;
+  margin: 20;
+  text-align: center;
+  display: inline-block;
+  background: #fffff;
+}
+
+.rightWrapper{
+  margin: 0px 0px 0px 70px;
+  width: 100%;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.root{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gridList{
+  width: 500;
+  height: 450;
+  overflow-y: auto;
+}
+
+.productButton {
+  padding: 0;
+  margin: 0;
+}
+
+.textWhite{
+  color: #ffffff;
+}
+
+.btnMargin{
+  margin: 12px;
+}
+.navbar{
+  padding: 10px 0px;
+  background: #ffffff;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+.btnPadding {
+  padding: 0px 0px 0px 10px;
+}
+.navbarWrapper {
+  background: #ffffff;
+  padding: 0px 50px;
+}
+
+
+.sellerWrapper {
+  background: #ffffff;
+}
+
+.productSliderWrapper>.slick-dots {
+  bottom: -80px !important;
+  width: 100%;
+  background: #ffffff;
+  padding: 15px 0px !important;
+  box-shadow: 5px 5px 20px #888888;
+}
+
+.productSliderWrapper>.slick-dots li {
+  width: 15% !important;
+  height: 50px !important;
+  overflow: hidden;
+  margin: 0 5px;
+  padding: 0;
+  border: 1px solid #D7D7D7;
+}
+
+.productSliderWrapper>.slick-dots li img {
+  height: 100% !important;
+}
+
+.productSliderWrapper.slick-slide>img.imageProduct {
+  margin: 0px auto;
+  height: 300px;
+  max-width: 80%;
+  overflow: hidden;
+}
+.titleSilder {
+  padding: 0px 5px;
+}
+.imgSlider {
+  margin: 0 auto;
+}
+
+.sellerWrapper {
+  background: #ffffff;
+  padding: 10px;
+  margin-top: 30px;
+}
+
+.productSlider {
+  box-shadow: 5px 5px 20px #888888;
+  background: #ffffff;
+}
+
+.productInfo {
+  background: #4DD0E1;
+  padding: 10px 20px;
+  position: relative;
+  color: #ffffff;
+  margin-top: 30px;
+}
+.productInfo h2 {
+  line-height: 1.2;
+}
+.arrow-left {
+  border-top: 20px solid transparent;
+  border-right: 20px solid #4DD0E1;
+  border-bottom: 20px solid transparent;
+  position: absolute;
+  left: -20px;
+}
+
+.productInfo .buttonPrimary button{
+  margin: 0px 35% !important;
+}
+
+.productInfo .buttonPrimary button div div svg{
+  color: #ffffff !important;
+}
+
+.slick-next:before, .slick-prev:before {
+  color: rgb(0, 188, 212) !important;
+  font-size: 25px !important;
+}
+
+.silderRelative {
+  margin-top: 70px;
+  padding: 25px;
+  background: #ffffff;
+}
+
+.productRelativeWrapper {
+  max-height: 200px;
+}
+.productRelativeWrapper img {
+  height: 120px;
+}
+
+.productRelativeWrapper:hover {
+  cursor: pointer;
+}
+
+.changeWrapper {
+  height: 60%;
+  max-width: 60%;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.silderRelative2 {
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
+  padding: 5px;
+  position: fixed;
+  bottom: 10px;
+  width: 90%;
+}
+.btnChange {
+  width: 75px;
+  height: 75px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+  background: rgb(0, 188, 212) !important;
+  position: relative;
+  border: none !important;
+}
+.btnChange:hover {
+  background: #29d5e8 !important;
+  cursor: pointer;
+}
+
+.btnChange:hover .iconChange {
+  display: none !important;
+}
+
+.btnChange:hover .textChange {
+  display: block;
+}
+
+.btnChangeContent {
+  background: transparent;
+  margin: auto;
+}
+
+.iconChange {
+  display: block;
+  text-align: center;
+  margin: auto;
+  height: 50px !important;
+  width: 50px !important;
+  color: #ffffff !important;
+  position: absolute;
+  top: 12px;
+  left: 11px;
+}
+
+.textChange {
+  display: none;
+  width: 60%;
+  color: #ffffff;
+  margin: auto;
+  position: absolute;
+  top: 27%;
+  left: 20%;
+}
+
+.iconNotice {
+  width: 10px;
+  height: 10px;
+  padding: 0px !important;
+}
+
+.registerWrapper {
+  background: #ffffff;
+  padding: 50px 20px;
+  padding: 20px;
+  margin: 80px;
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px !important;
+}
+
+.registerWrapper h1 {
+  margin-top: 10px;
+}
+
+.btnRegister {
+    margin: 50px 0px 10px 0px;
+}
+
+.AvatarWrapper {
+  padding: 20px 20px 0px 20px;
+}
+
+.AvatarWrapper img{
+  height: 160px;
+}
+
+.btnAvatarBottom {
+  position: relative;
+  top: 150px;
+  bottom: auto;
+}
+
+.productInfo-change {
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.productInfo-change img {
+  width: 50%;
+}
+
+.productInfo-change p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.productSelected {
+  border-width: 0.1px 0 0 0;
+  border-style: solid;
+  border-color: #000000;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
+  padding: 8px;
+  text-align: center;
+}
+
+.productSelected img.avatar {
+    height: 60px;
+}
+
+.productSelected h3{
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.productDetail p {
+  font-size: 14px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.imageProductConfirm {
+  width: 50%;
+}
+
+.btnChangeCol {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+.socialLogin {
+  border-left: 1px solid #B7B7B7;
+}
+
+.btnSocial {
+  margin: 10px;
+  color: #ffffff !important;
+}
+
+.WrapperProductChange {
+  margin: 10px;
+}
+
+.product-each {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.product-each:hover {
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
+}
+
+.product-each img {
+  width: 80%;
+  margin: auto;
+}
+
+.btnAddWrapper {
+  height: 100%;
+}
+.btnAdd {
+  background: #ffffff !important;
+  border: none !important;
+  border-bottom: none !important;
+  height: 100%;
+}
+
+.iconAdd {
+  width: 100% !important;
+  height: auto !important;
+}
+
+
+.chatbox {
+  position: absolute;
+  bottom: 0px;
+  right: 50px;
+  background: #ffffff;
+  width: 350px;
+}
+
+.chatboxTitle {
+  background: rgb(0, 188, 212);
+  color: #ffffff;
+  padding: 5px 0px;
+}
+
+.titleContent {
+  text-align: left;
+  text-align: center;
+}
+
+.titleButton {
+  text-align: right;
+}
+
+.btnChatBox {
+  border: none !important;
+  margin-left: 3px;
+  background: #ffffff !important;
+  padding: 0px 10px;
+}
+
+.chatboxContentWrapper {
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.chatboxContent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: -17px;
+  padding: 0px 15px 0px 15px;
+  list-style-type: none;
+  overflow-y: scroll;
+}
+.chatboxContent li{
+  // margin-top: 5px;
+}
+
+.chatboxContent .message {
+  text-align: left;
+}
+
+.chatboxContent .messageOwn {
+  text-align: right;
+}
+
+.chatboxInput {
+  display: inline;
+  margin: 0px 20px;
+  padding: 0px 10px;
+}
+
+.btnUpload {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+.avatarWrapper {
+  height: 215px;
+}
+.DropdownCategory {
+  width: 100%;
+  position: relative !important;
+  bottom: -15px;
+}
+.eachOwnerProduct {
+  background: #ffffff !important;
+  margin-bottom: 5px;
+}
+
+.singleProductBargain img{
+  width: 35%;
+}
+
+.singleProductBargain p{
+  margin-top: 5px !important;
+  margin-bottom: 7px !important;
+}
+
+.imagePreviewChange {
+  height: 150px;
+}
+.buttonWrapperMyProduct {
+  background: rgba(0, 188, 212, 0.97);
+  padding: 1px 0px;
+}
+
+.buttonWrapperMyProduct .defaultButton .btn {
+  padding: 6px;
+  width: 100%;
+  outline: none !important;
+  border: none !important;
+  background-color: rgb(0, 188, 212) !important;
+}
+
+
+.sliderProductRequest {
+  margin: 0px 25px;
+}
+
+
+.productRequest-Wrapper {
+  padding: 10px;
+
+}
+
+.productRequest {
+  position: relative;
+  background: #ffffff;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.imageSliderRequest {
+  max-height: 250px;
+  width: 90%;
+  height: 200px;
+  border: 1px solid;
+  margin: 0 auto;
+}
+
+.productRequest:hover .prouctInfo-request{
+  display: block;
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
+}
+
+.prouctInfo-request {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+  display: none;
+  color: #fffff;
+  background: #80DEEA;
+}
+
+.productRequest-active {
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
+}
+
+.prouctInfo-request h3, .prouctInfo-request p {
+  color: #ffffff;
+}
+
+.requestWrapper {
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
+  position: relative;
+}
+
+.BlockContent {
+  height: 500px;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  background: #ffffff;
+  opacity: 0.9;
+}
+
+.BlockContentText{
+  opacity: 1;
+  line-height: 1.5;
+  padding-top: 100px;
+}
+.BlockContentText h1 {
+  color: red;
+}
+
+.listChangeWrapper {
+  background: #ffffff;
+  padding: 10px;
+  height: 250px;
+}
+
+.listAuction {
+  background: #ffffff;
+  padding: 10px;
+  height: 150px;
+}
+
+button.btn-addProduct-float {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 5%;
+  background: rgb(0, 188, 212);
+  border-radius: 50%;
+  border: none;
+  z-index: 2;
+}
+
+button.btn-addProduct-float:before{
+  content: "+";
+  font-size: 50px;
+  color: #ffffff;
+  position: absolute;
+  left: 30%;
+}
+
+@media all and (max-height: 768px) {
+  .silderRelative2 {
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px !important;
+    position: static;
+    width: 100%;
+  }
+}
