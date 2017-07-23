@@ -1,0 +1,12 @@
+{
+  "apps" : [{
+    "name"        : "Frontend Dev",
+    "script"      : "webpack-dev-server.config.js",
+    "watch"       : true,
+    "args": ['--history-api-fallback', '--progress'],
+    "node_args": ['--config'],
+    "exec_interpreter" : "webpack-dev-server",
+    "exec_mode"        : "fork",
+  }]
+}
+

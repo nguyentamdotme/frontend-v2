@@ -31,9 +31,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
-    "axios": "^0.16.1",
     "babel-polyfill": "^6.23.0",
-    "flexboxgrid": "^6.3.1",
     "form-data": "^2.2.0",
     "fs": "0.0.1-security",
     "http": "0.0.0",
@@ -52,7 +50,6 @@
     "react-thunk": "^1.0.0",
     "redux": "^3.6.0",
     "redux-immutable-state-invariant": "^2.0.0",
-    "redux-saga": "^0.15.3",
     "redux-thunk": "^2.2.0"
   }
 }
