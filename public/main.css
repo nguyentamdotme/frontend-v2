@@ -1277,12 +1277,6 @@ button.btn-addProduct-float:before{
   left: 30%;
 }
 
-.floatBtnChatbox {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-}
-
 @media all and (max-height: 768px) {
   .silderRelative2 {
     background: #ffffff;
@@ -1293,4 +1287,96 @@ button.btn-addProduct-float:before{
     position: static;
     width: 100%;
   }
+}
+
+.wrapperChat {
+  position: fixed;
+  bottom: 0px;
+  right: 20px;
+  width: 315px;
+  height: 350px;
+  z-index: 4;
+  background: #ffffff;
+  box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.5);
+  overflow: hidden;
+}
+.chatTitle{
+  height: 45px;
+  line-height: 45px;
+  box-shadow: 0px 3px 3px 0px rgba(50, 50, 50, 0.5);
+}
+
+.chatTitle > div {
+  margin-top: 0px !important;
+}
+.iconTitleWrapper {
+  height: 24px !important;
+}
+
+.chatContent {
+  width: 330px;
+  height: 250px;
+  max-width: 330px;
+  overflow: scroll;
+  border-width: 0 0 0.1px 0;
+  border-color: #E0E0E0;
+  list-style: none;
+  padding: 10px 0px !important;
+  margin: 0px !important;
+}
+
+.chatContent li {
+  margin-top: 15px;
+}
+
+.messageWrapper {
+  background: #F2F2F2;
+}
+
+.chatInputWrapper {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  display: inline;
+  background: #ffffff;
+}
+
+.chatInput {
+  padding: 0px 10px;
+  width: 180px !important;
+  padding-right: 5px;
+}
+
+button.chatButton {
+  margin-left: 20px !important;
+}
+
+.floatBtnChatbox {
+  position: fixed;
+  bottom: 5px;
+  left: 10px;
+}
+
+.msgGuest {
+  text-align: left;
+}
+
+.msgGuest span {
+  background: #f2f2f2;
+  padding: 5px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.msgUser {
+  text-align: right;
+}
+
+.msgUser span{
+  background: rgb(0, 188, 212);
+  padding: 5px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.avaChat {
+  text-align: center;
 }
