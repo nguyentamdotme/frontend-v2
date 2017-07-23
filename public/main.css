@@ -1277,6 +1277,12 @@ button.btn-addProduct-float:before{
   left: 30%;
 }
 
+.floatBtnChatbox {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
 @media all and (max-height: 768px) {
   .silderRelative2 {
     background: #ffffff;
