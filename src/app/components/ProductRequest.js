@@ -26,11 +26,22 @@ class ProductRequest extends React.Component {
     const productItem = this.props.productItem;
     this.props.transactionActions.addProgress(productItem, product, true);
   }
+  compare = (a,b) => {
+    if (a.price < b.price)
+      return 1;
+    if (a.price > b.price)
+      return -1;
+    return 0;
+  }
 
   listAuction = () => {
-    const listAuction = this.props.listAuction;
+    let listAuction = this.props.listAuction;
     if(listAuction.length != 0) {
+      listAuction = listAuction.sort(this.compare);
+      let i = 0;
       return listAuction.map(auction => {
+        i++;
+        // if(i==3) break;
         const AvatarImg = auction.owner.avatar != null ? auction.owner.avatar.filename : '';
         return (
           <Col xs={4} key={auction._id}>

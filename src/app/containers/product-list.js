@@ -23,9 +23,9 @@ class ProductList extends React.Component {
 	const { products, actions } = this.props;
 		if(Array.isArray(products.data) && !products.loading) {
 			return products.data.map(product => {
-				console.log(product.image.length);
+				// console.log(product.image.length);
 				const imgProduct = product.image.length != 0 && product.image[0] != undefined ? product.image[0].filename : '';
-				console.log(imgProduct);
+				// console.log(imgProduct);
 				if(product.status == 1) {
 					return(
 						<Col key={product._id} xs={2} className="productWrapper">

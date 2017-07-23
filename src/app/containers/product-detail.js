@@ -32,7 +32,9 @@ class ProductDetail extends React.Component {
 
 
   componentWillMount() {
-    this.props.actions.singleProduct(this.state.productId);
+    const productId = this.props.params.idProductDetail;
+    this.setState({productId});
+    this.props.actions.singleProduct(productId);
   }
 
   productInfo() {
@@ -71,7 +73,7 @@ class ProductDetail extends React.Component {
         return(<div>Loading</div>);
       } else {
         const product = this.props.product.singleProduct;
-        console.log(product);
+        // console.log(product);
         if(product.image != undefined){
           if(product.image.length != 0) {
             let settings = {
@@ -115,7 +117,7 @@ class ProductDetail extends React.Component {
       <div>
         <Row>
           <Col xs={3}>
-            <SellerInfo sellerInfo={product.owner}/>
+            <SellerInfo sellerInfo={product.owner} product={product}/>
           </Col>
             {this.productSlider()}
             {this.productInfo()}

@@ -9,17 +9,10 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Navbar from './Navbar';
 import MainContent from './MainContent';
 import LeftMenu from './LeftMenu';
-import ChatBox from './ChatBox';
 import ButtonAddProduct from './ButtonAddProduct';
+import ChatBox from './ChatBox';
 
-// import io from 'socket.io-client';
-
-// const socket = io.connect('http://localhost:3000');
-
-
-// socket.on('connect', function (socket) {
-//     console.log('Connected!');
-// });
+import backend from '../config/backend.config';
 
 const muiTheme = getMuiTheme({
   palette: {
@@ -45,7 +38,7 @@ class Main extends Component {
                 <Col xs={11} md={11} className="rightWrapper">
                   {this.props.children}
                 </Col>
-
+                <ChatBox/>
               </Row>
             </Grid>
           </div>

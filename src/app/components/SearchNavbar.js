@@ -1,8 +1,15 @@
 import React from 'react';
+import { bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+
 import { AutoComplete, MenuItem } from 'material-ui';
+import {browserHistory} from 'react-router';
 
 import callAPI from '../api/callAPI';
 import convertVietnamese from '../middlewares/covertVietnamese';
+
+import * as productActions from '../actions/product-actions';
+
 
 class SearchNavbar extends React.Component {
 	constructor(props) {
@@ -50,6 +57,11 @@ class SearchNavbar extends React.Component {
     }, 700);
   };
 
+  selected = (e) => {
+    this.props.actions.singleProduct(e._id);
+    browserHistory.push('/product-detail/'+e._id);
+  }
+
 	render() {
     const dataSourceConfig = {
       text: 'productName',
@@ -65,10 +77,23 @@ class SearchNavbar extends React.Component {
           openOnFocus={true}
           fullWidth={true}
           dataSourceConfig={dataSourceConfig}
+          onNewRequest={this.selected}
         />
 			</div>
 		);
 	}
 }
+function mapStateToProps(state) {
+  return {
+    products: state.productReducer,
+    user: state.authReducer
+  }
+}
 
-export default SearchNavbar;
+function matchDispatchToProps(dispatch) {
+  return {
+    actions: bindActionCreators(productActions, dispatch)
+  }
+}
+
+export default connect(mapStateToProps, matchDispatchToProps)(SearchNavbar);

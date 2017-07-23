@@ -32,8 +32,8 @@ class ButtonAddProduct extends React.Component{
     this.handleUploadImage = this.handleUploadImage.bind(this);
   }
   componentWillMount() {
-    console.log('this.props.categoryActions');
-    console.log(this.props.categoryActions);
+    // console.log('this.props.categoryActions');
+    // console.log(this.props.categoryActions);
     this.props.categoryActions.showCategory();
   }
 
@@ -71,19 +71,23 @@ class ButtonAddProduct extends React.Component{
   onSubmit = (e) => {
     const used = parseFloat(this.refs.used.input.value);
     const userValue = used > 100 ? 100 : used;
-    this.state.productData = {
-      productName: this.refs.productName.input.value,
-      category: this.state.categorySelected,
-      description: this.refs.productDescription.input.value,
-      priceIn: parseFloat(this.refs.productPriceIn.input.value.replaceAll(',','')),
-      priceOut: parseFloat(this.refs.productPriceOut.input.value.replaceAll(',','')),
-      image: this.props.products.imageArray,
-      owner: this.props.user.data._id,
-      used: userValue,
+    if(this.props.products.imageArray.length != 0) {
+      this.state.productData = {
+        productName: this.refs.productName.input.value,
+        category: this.state.categorySelected,
+        description: this.refs.productDescription.input.value,
+        priceIn: parseFloat(this.refs.productPriceIn.input.value.replaceAll(',','')),
+        priceOut: parseFloat(this.refs.productPriceOut.input.value.replaceAll(',','')),
+        image: this.props.products.imageArray,
+        owner: this.props.user.data._id,
+        used: userValue,
+      }
+      this.props.productActions.addProduct(this.state.productData);
+      this.props.productActions.showOwnerProduct(this.props.user.data._id);
+      this.handleClose();
+    } else {
+      alert('Bạn chưa điền đủ thông tin');
     }
-    this.props.productActions.addProduct(this.state.productData);
-    this.props.productActions.showOwnerProduct(this.props.user.data._id);
-    this.handleClose();
   };
 
   CategoryList = () => {
@@ -204,7 +208,7 @@ class ButtonAddProduct extends React.Component{
         </div>
       );
     } else {
-      if(this.props.user.data !== undefined) {
+      if(this.props.user.data != null) {
         return(
           <div className  = "btnAddWrapper">
             <button

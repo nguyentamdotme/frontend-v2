@@ -9,7 +9,7 @@ const initState = {
   message: '',
   isError: false,
   isLogin: false,
-  data: undefined,
+  data: null,
   requesting: false,
   imageAvatar: null,
   uploading: false,
@@ -82,7 +82,8 @@ export default function(state = initState, action) {
       return {
         ...state,
         type: types.LOGOUT_SUCCESS,
-        isLogin: false
+        isLogin: false,
+        data: null
       }
     } break;
 

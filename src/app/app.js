@@ -19,6 +19,7 @@ import allUser       from './components/allUser';
 import allProduct    from './components/allProduct';
 import ListTransaction   from './components/ListTransaction';
 import ShowProductOfCategory  from './components/ShowProductOfCategory';
+import ChatList from './components/ChatList';
 
 import ProductDetail from './containers/product-detail';
 
@@ -32,7 +33,7 @@ const store = storeConfig();
 const history = syncHistoryWithStore(browserHistory, store);
 // history.listen(location => analyticsService.track(location.pathname));
 store.subscribe(() => {
-  console.log('store state');
+  // console.log('store state');
   console.log(store.getState());
 });
 
@@ -73,6 +74,7 @@ ReactDOM.render(
         <Route path="all-transaction" component={ListTransaction}/>
         <Route path="all-user" component={allUser}/>
         <Route path="all-product" component={allProduct}/>
+        <Route path="chat-list" component={ChatList}/>
       </Router>
     </Router>
 	</Provider>

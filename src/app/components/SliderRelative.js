@@ -33,6 +33,7 @@ class SliderRelative extends React.Component{
   handleClickProduct = (_id, e) => {
     e.preventDefault();
     this.setState({idProduct: _id});
+    this.props.actions.singleProduct(_id);
     const link = '/product-detail/'+_id;
     browserHistory.push(link);
   };
