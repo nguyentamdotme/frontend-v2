@@ -44,7 +44,8 @@ class Profiles extends React.Component {
         openDialog: false,
         typeDialog: '',
         child: '0',
-        genderChild: false
+        genderChild: false,
+        name: user.name.lastName + '' + user.name.firstName
       };
     } else {
       this.state = {
@@ -67,11 +68,20 @@ class Profiles extends React.Component {
         openDialog: false,
         typeDialog: '',
         child: '0',
-        genderChild: false
+        genderChild: false,
+        name:''
       }
     }
     this.handleUploadAvatar = this.handleUploadAvatar.bind(this);
   }
+
+  delay = (function(){
+    let timer = 0;
+    return function(callback, ms){
+      clearTimeout (timer);
+      timer = setTimeout(callback, ms);
+    };
+  })();
 
   handleOpen = (type) => {
     this.setState({typeDialog: type});
@@ -106,54 +116,45 @@ class Profiles extends React.Component {
   };
 
   handleChangeInput = (field, e) => {
-    console.log(field);
-    let formData = this.state.formData;
-    switch(field) {
-      case 'name'     : {
-        const name = e.target.value;
-        const arr  = name.split('');
-        let nameObj = {
-          firstName: '',
-          lastName: ''
-        }
-        if(arr.length < 2) {
-          nameObj.firstName = arr[0];
-        } else {
-          const firstName = name.match(/^\w*\s/)[0].replace(/\s\s+/g, ' ').replace(/^\s+/g, '');
-          const lastName = name.split(/^\w*\s/)[1].replace(/\s\s+/g, ' ');
-          nameObj = {
-            firstName,
-            lastName
+      // console.log(field);
+      let formData = this.state.formData;
+      switch(field) {
+        case 'name'     : {
+            const name = e.target.value;
+            console.log('name', name);
+            this.setState({name});
+          };
+          break;
+        case 'email'    : formData.email = e.target.value;
+          break;
+        case 'phone'    : formData.phone = e.target.value;
+          break;
+        case 'address'  : formData.address = e.target.value;
+          break;
+        case 'username' : formData.username = e.target.value;
+          break;
+        case 'password' : formData.password = e.target.value;
+          break;
+        case 'newpassword' :  {
+          const newpassword = e.target.value;
+          formData.newpassword = e.target.value;
+          if(newpassword.toString().length >= 8) {
+            this.refs.newpassword.state.errorText = '';
+          } else {
+            this.refs.newpassword.state.errorText = 'Mật khẩu từ 8 ký tự trở lên';
           }
         }
-        formData.name = nameObj;
-      };
-        break;
-      case 'email'    : formData.email = e.target.value;
-        break;
-      case 'phone'    : formData.phone = e.target.value;
-        break;
-      case 'address'  : formData.address = e.target.value;
-        break;
-      case 'username' : formData.username = e.target.value;
-        break;
-      case 'password' : formData.password = e.target.value;
-        break;
-      case 'newpassword' :  {
-        const newpassword = e.target.value;
-        formData.newpassword = e.target.value;
-        if(newpassword.toString().length >= 8) {
-          this.refs.newpassword.state.errorText = '';
-        } else {
-          this.refs.newpassword.state.errorText = 'Mật khẩu từ 8 ký tự trở lên';
-        }
+          break;
+        default: null; break;
       }
-        break;
-      default: null; break;
-    }
 
-    this.setState(formData);
+      this.setState(formData);
   };
+
+  handleChangeName = (e) => {
+    const name = e.target.value;
+    this.setState({name});
+  }
 
   handleUploadAvatar = (e) => {
     this.props.userActions.uploadAvatar(e.target.files[0]);
@@ -176,9 +177,30 @@ class Profiles extends React.Component {
       this.setState(formData);
     }
     let data = this.state.formData;
+
+    const arr  = this.state.name.split(' ');
+    let nameObj = {
+      firstName: '',
+      lastName: ''
+    }
+    if(arr.length < 2) {
+      nameObj = {
+        firstName: arr[0],
+        lastName: ' '
+      }
+    } else {
+      const firstName = arr[arr.length-1];
+      arr.pop();
+      const lastName = arr.toString().replace(',',' ');
+      nameObj = {
+        firstName,
+        lastName
+      }
+    }
+    data.name = nameObj;
     delete data.password;
     delete data.newpassword;
-    // console.log(this.state.formData);
+    // console.log('data', data);
     this.props.userActions.updateProfile(userId, data);
     this.handleOpen('updateProfile');
   };
@@ -326,8 +348,8 @@ class Profiles extends React.Component {
                   fullWidth={true}
                   ref="name"
                   errorText=""
-                  value={name.firstName + ' ' + name.lastName}
-                  onChange={this.handleChangeInput.bind(this,'name')}
+                  value={this.state.name}
+                  onChange={this.handleChangeName.bind(this)}
                 />
               </Row>
               <Row>
