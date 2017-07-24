@@ -45,7 +45,7 @@ class Profiles extends React.Component {
         typeDialog: '',
         child: '0',
         genderChild: false,
-        name: user.name.lastName + '' + user.name.firstName
+        name: user.name.lastName + ' ' + user.name.firstName
       };
     } else {
       this.state = {
@@ -191,7 +191,7 @@ class Profiles extends React.Component {
     } else {
       const firstName = arr[arr.length-1];
       arr.pop();
-      const lastName = arr.toString().replace(',',' ');
+      const lastName = arr.toString().replaceAll(',',' ');
       nameObj = {
         firstName,
         lastName
