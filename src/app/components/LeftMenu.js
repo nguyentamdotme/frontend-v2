@@ -14,6 +14,9 @@ import {
   ActionShoppingBasket
 } from 'material-ui/svg-icons';
 
+import ActionAutoRenew from 'material-ui/svg-icons/action/autorenew';
+import Monetization from 'material-ui/svg-icons/editor/monetization-on';
+
 import * as userActions from '../actions/session-actions';
 
 
@@ -29,6 +32,12 @@ class LeftMenu extends React.Component {
         </Link>
         <Link to="/my-profile">
           <ListItem className="listItem" leftIcon={<ActionAccountBox />} />
+        </Link>
+        <Link to="/list-auction">
+          <ListItem className="listItem" leftIcon={<Monetization />} />
+        </Link>
+        <Link to="/list-auction">
+          <ListItem className="listItem" leftIcon={<ActionAutoRenew />} />
         </Link>
       </div>
     );

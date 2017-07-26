@@ -20,6 +20,7 @@ import allProduct    from './components/allProduct';
 import ListTransaction   from './components/ListTransaction';
 import ShowProductOfCategory  from './components/ShowProductOfCategory';
 import ChatList from './components/ChatList';
+import ListAuction from './components/ListAuction';
 
 import ProductDetail from './containers/product-detail';
 
@@ -75,6 +76,7 @@ ReactDOM.render(
         <Route path="all-user" component={allUser}/>
         <Route path="all-product" component={allProduct}/>
         <Route path="chat-list" component={ChatList}/>
+        <Route path="list-auction" component={ListAuction}/>
       </Router>
     </Router>
 	</Provider>

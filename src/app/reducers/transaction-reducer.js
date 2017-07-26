@@ -16,7 +16,12 @@ const initState = {
   transOfUser: [],
   loadingAllTrans: false,
   allTransaction: [],
-  updatingStatus: false
+  updatingStatus: false,
+  loadingAuction: false,
+  listAuction: [],
+  loadingChange: false,
+  listChange: [],
+  loadingRemoveAution: false
 
 }
 export default function(state = initState, action) {
@@ -245,6 +250,75 @@ export default function(state = initState, action) {
         isError     : true,
         error       : action.error,
         updatingStatus: false
+      }
+    }
+    break;
+
+    case types.LOADING_AUCTION:
+    {
+      return {
+        ...state,
+        type: types.LOADING_AUCTION,
+        loadingAuction: true
+      }
+    }
+    break;
+
+    case types.AUCTION_SUCCESS:
+    {
+      return {
+        ...state,
+        type: types.AUCTION_SUCCESS,
+        message     : action.message,
+        isError     : false,
+        loadingAuction: false,
+        listAuction: action.data
+      }
+    }
+    break;
+
+    case types.AUCTION_ERROR:
+    {
+      return {
+        ...state,
+        type: types.AUCTION_ERROR,
+        isError     : true,
+        error       : action.error,
+        loadingAuction: false
+      }
+    }
+    break;
+
+    case types.LOADING_REMOVE_AUCTION:
+    {
+      return {
+        ...state,
+        type: types.LOADING_REMOVE_AUCTION,
+        loadingRemoveAution: true
+      }
+    }
+    break;
+
+    case types.REMOVE_AUCTION_SUCCESS:
+    {
+      return {
+        ...state,
+        type: types.REMOVE_AUCTION_SUCCESS,
+        message     : action.message,
+        isError     : false,
+        loadingRemoveAution: false,
+      }
+    }
+    break;
+
+    case types.REMOVE_AUCTION_ERROR:
+    {
+      return {
+        ...state,
+        type: types.REMOVE_AUCTION_ERROR,
+        isError     : true,
+        error       : action.error,
+        loadingRemoveAution: false
       }
     }
     break;

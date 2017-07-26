@@ -224,3 +224,88 @@ export function updateStatusTrans(transId, value, productStatus) {
     });
   }
 }
+
+export function showListAuction(userId) {
+  return (dispatch)=> {
+    const opt = {
+      url    : '/transaction/auction/user/'+userId,
+      method : 'GET',
+    }
+    dispatch({type:types.LOADING_AUCTION});
+    return callAPI(opt).then(res => {
+      if(res.status == 200) {
+        dispatch({
+          type: types.AUCTION_SUCCESS,
+          data: res.data,
+          message: res.message
+        });
+      } else {
+        dispatch({
+          type: types.AUCTION_ERROR,
+          error: res.message
+        });
+      }
+    }).catch(error => {
+      console.log(error);
+      throw(error);
+    });
+  }
+}
+
+export function removeAuction(_id, index, userId) {
+  return (dispatch)=> {
+    const opt = {
+      url    : '/transaction/auction/remove/',
+      method : 'POST',
+      data: {_id, index, userId}
+    }
+    dispatch({type:types.LOADING_REMOVE_AUCTION});
+    return callAPI(opt).then(res => {
+      if(res.status == 200) {
+        dispatch({
+          type: types.REMOVE_AUCTION_SUCCESS,
+          data: res.data,
+          message: res.message
+        });
+        dispatch(showListAuction(userId));
+      } else {
+        dispatch({
+          type: types.REMOVE_AUCTION_ERROR,
+          error: res.message
+        });
+      }
+    }).catch(error => {
+      dispatch({
+        type: types.REMOVE_AUCTION_ERROR,
+        error: error
+      });
+    });
+  }
+}
+
+export function showListChange(userId) {
+  return (dispatch)=> {
+    const opt = {
+      url    : '/transaction/change/user/'+userId,
+      method : 'GET',
+    }
+    dispatch({type:types.LOADING_CHANGE});
+    return callAPI(opt).then(res => {
+      if(res.status == 200) {
+        dispatch({
+          type: types.CHANGE_SUCCESS,
+          message: res.message,
+          data: res.data
+        });
+      } else {
+        dispatch({
+          type: types.CHANGE_ERROR,
+          error: res.message
+        });
+      }
+    }).catch(error => {
+      console.log(error);
+      throw(error);
+    });
+  }
+}
