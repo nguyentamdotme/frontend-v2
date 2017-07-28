@@ -309,3 +309,34 @@ export function showListChange(userId) {
     });
   }
 }
+
+export function removeChange(_id, index, userId) {
+  return (dispatch)=> {
+    const opt = {
+      url    : '/transaction/change/remove/',
+      method : 'POST',
+      data: {_id, index, userId}
+    }
+    dispatch({type:types.LOADING_REMOVE_CHANGE});
+    return callAPI(opt).then(res => {
+      if(res.status == 200) {
+        dispatch({
+          type: types.REMOVE_CHANGE_SUCCESS,
+          data: res.data,
+          message: res.message
+        });
+        dispatch(showListChange(userId));
+      } else {
+        dispatch({
+          type: types.REMOVE_CHANGE_ERROR,
+          error: res.message
+        });
+      }
+    }).catch(error => {
+      dispatch({
+        type: types.REMOVE_CHANGE_ERROR,
+        error: error
+      });
+    });
+  }
+}

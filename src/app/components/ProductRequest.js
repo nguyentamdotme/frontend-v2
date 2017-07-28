@@ -132,7 +132,7 @@ class ProductRequest extends React.Component {
     const listChange = this.props.listChange;
     console.log('tam listChange');
     console.log(listChange);
-    if(listChange != null) {
+    if(listChange.length > 0) {
       return(
         <Slider {...settings} className="sliderProductRequest">
           {this.slider(listChange)}

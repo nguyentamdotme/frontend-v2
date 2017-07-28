@@ -21,6 +21,7 @@ import ListTransaction   from './components/ListTransaction';
 import ShowProductOfCategory  from './components/ShowProductOfCategory';
 import ChatList from './components/ChatList';
 import ListAuction from './components/ListAuction';
+import ListChange from './components/ListChange';
 
 import ProductDetail from './containers/product-detail';
 
@@ -77,6 +78,7 @@ ReactDOM.render(
         <Route path="all-product" component={allProduct}/>
         <Route path="chat-list" component={ChatList}/>
         <Route path="list-auction" component={ListAuction}/>
+        <Route path="list-change" component={ListChange}/>
       </Router>
     </Router>
 	</Provider>

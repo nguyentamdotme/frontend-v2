@@ -21,7 +21,8 @@ const initState = {
   listAuction: [],
   loadingChange: false,
   listChange: [],
-  loadingRemoveAution: false
+  loadingRemoveAution: false,
+  loadingRemoveChange: false
 
 }
 export default function(state = initState, action) {
@@ -319,6 +320,75 @@ export default function(state = initState, action) {
         isError     : true,
         error       : action.error,
         loadingRemoveAution: false
+      }
+    }
+    break;
+
+    case types.LOADING_CHANGE:
+    {
+      return {
+        ...state,
+        type: types.LOADING_CHANGE,
+        loadingChange: true
+      }
+    }
+    break;
+
+    case types.CHANGE_SUCCESS:
+    {
+      return {
+        ...state,
+        type: types.CHANGE_SUCCESS,
+        message     : action.message,
+        isError     : false,
+        loadingChange: false,
+        listChange: action.data
+      }
+    }
+    break;
+
+    case types.CHANGE_ERROR:
+    {
+      return {
+        ...state,
+        type: types.CHANGE_ERROR,
+        isError     : true,
+        error       : action.error,
+        loadingChange: false
+      }
+    }
+    break;
+
+    case types.LOADING_REMOVE_CHANGE:
+    {
+      return {
+        ...state,
+        type: types.LOADING_REMOVE_CHANGE,
+        loadingRemoveChange: true
+      }
+    }
+    break;
+
+    case types.REMOVE_CHANGE_SUCCESS:
+    {
+      return {
+        ...state,
+        type: types.REMOVE_CHANGE_SUCCESS,
+        message     : action.message,
+        isError     : false,
+        loadingRemoveChange: false,
+      }
+    }
+    break;
+
+    case types.REMOVE_CHANGE_ERROR:
+    {
+      return {
+        ...state,
+        type: types.REMOVE_CHANGE_ERROR,
+        isError     : true,
+        error       : action.error,
+        loadingRemoveChange: false
       }
     }
     break;

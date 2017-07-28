@@ -36,7 +36,7 @@ class LeftMenu extends React.Component {
         <Link to="/list-auction">
           <ListItem className="listItem" leftIcon={<Monetization />} />
         </Link>
-        <Link to="/list-auction">
+        <Link to="/list-change">
           <ListItem className="listItem" leftIcon={<ActionAutoRenew />} />
         </Link>
       </div>
